@@ -1,4 +1,4 @@
-class VentasDepartamentos:
+class ventasMensuales:
 
     MESES = [
         "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
@@ -68,7 +68,7 @@ class VentasDepartamentos:
             print(fila)
 
 if __name__ == "__main__":
-    sistema = VentasDepartamentos()
+    sistema = ventasMensuales()
 
     # 1. Insertar ventas
     sistema.insertar_venta("Enero", "Ropa", 1500)
