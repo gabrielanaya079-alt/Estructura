@@ -102,7 +102,7 @@ Cada torre funciona como una **pila (stack)** con la regla **LIFO** (*Last In, F
 | `pop` (desapilar) | Quitar el disco de arriba | `torres[origen].pop()` |
 | `top` (cima) | Único disco accesible | `torres[i][-1]` |
 
-**Es como una pila de platos o de panqueques. yq que solo puedes tomar el de arriba, y para llegar al de abajo primero debes mover todos los de encima. Justo por eso el disco más grande solo se mueve cuando los demás ya están en la torre auxiliar.** 
+**Es como una pila de platos, ya que solo puedes tomar el de arriba, y para llegar al de abajo primero debes mover todos los de encima. Justo por eso el disco más grande solo se mueve cuando los demás ya están en las otras torres.** 
 
 La regla es que nunca se puede poner un disco grande sobre uno pequeño. puesto que es una pila **ordenada**: lo que se apila debe ser menor que la cima actual. Se verifica en `intentar_mover` comparando con `torres[destino][-1]`.
 
