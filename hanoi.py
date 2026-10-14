@@ -1,13 +1,3 @@
-#!/usr/bin/env python3
-"""
-Torre de Hanoi - versión gráfica (tkinter, sin instalar nada extra)
-
-  * Jugar tú: clic en una torre para levantar su disco superior y clic en
-    otra torre para soltarlo.
-  * Resolver solo: la computadora resuelve con animación (velocidad ajustable).
-  * Medir tiempos: ventana que mide 5, 10, 30 y 64 discos.
-"""
-
 import colorsys
 import queue
 import threading
@@ -15,9 +5,6 @@ import time
 import tkinter as tk
 from tkinter import messagebox, ttk
 
-# ----------------------------------------------------------------------------
-# Constantes de dibujo
-# ----------------------------------------------------------------------------
 CANVAS_W, CANVAS_H = 780, 370
 PEG_X = [140, 390, 640]
 BASE_Y = 320
