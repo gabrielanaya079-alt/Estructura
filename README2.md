@@ -2,21 +2,12 @@
 
 Programa en Python con interfaz gráfica (`tkinter`) que permite **jugar** la Torre de Hanoi o dejar que **la computadora la resuelva sola**, y que además **mide el tiempo** que tarda en resolver 5, 10, 30 y 64 discos.
 
-## Cómo ejecutarlo
-
-```bash
-python torre_hanoi_gui.py
-```
-
-No requiere instalar librerías externas (`tkinter` viene incluido con Python).
-
 ## Funcionalidades
 
 - **Jugar tú:** clic en una torre para levantar su disco superior y clic en otra para soltarlo.
 - **Resolver solo:** la computadora resuelve con animación y velocidad ajustable.
 - **Medir tiempos:** ventana que resuelve (o estima) 5, 10, 30 y 64 discos.
 
----
 
 ## Estructura del código
 
