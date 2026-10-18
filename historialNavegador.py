@@ -68,7 +68,7 @@ class Navegador:
         self.actual = self.adelante.desapilar()
         print(f"Avanzaste a: {self.actual}")
 
-    def mostrar_historial(self):G
+    def mostrar_historial(self):
         print("\n--- Historial ---")
         if self.actual is None:
             print("(vacío)\n")
