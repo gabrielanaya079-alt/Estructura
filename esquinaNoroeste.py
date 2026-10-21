@@ -1,37 +1,15 @@
-# -*- coding: utf-8 -*-
-"""
-Modelo de Transporte - Método de la Esquina Noroeste
-Investigación de Operaciones
-
-- Resuelve problemas BALANCEADOS y NO BALANCEADOS
-  (agrega automáticamente un origen o destino ficticio con costo 0).
-- Muestra la solución paso a paso con tablas.
-- Calcula el costo total.
-
-Uso:  python esquina_noroeste.py
-Requiere solo Python 3 (tkinter viene incluido).
-"""
 
 import tkinter as tk
 from tkinter import ttk, messagebox
 
 EPS = 1e-9
 
-
 def fmt(x):
-    """Formatea un número sin decimales innecesarios."""
     x = round(float(x), 6)
     return str(int(x)) if x == int(x) else str(x)
 
-
-# ----------------------------------------------------------------------
-#  LÓGICA DEL MÉTODO
-# ----------------------------------------------------------------------
 def esquina_noroeste(costos, oferta, demanda):
-    """
-    Resuelve por esquina noroeste. Devuelve un diccionario con todo lo
-    necesario para mostrar los pasos.
-    """
+
     m, n = len(oferta), len(demanda)
     filas = [f"Origen {i + 1}" for i in range(m)]
     cols = [f"Destino {j + 1}" for j in range(n)]
@@ -139,10 +117,6 @@ def esquina_noroeste(costos, oferta, demanda):
         "partes": partes, "basicas": basicas, "m": m, "n": n, "notas": notas,
     }
 
-
-# ----------------------------------------------------------------------
-#  INTERFAZ
-# ----------------------------------------------------------------------
 class App(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -152,7 +126,7 @@ class App(tk.Tk):
         self.res = None
         self.paso_actual = 0
 
-        # ---- Configuración ----
+
         top = ttk.LabelFrame(self, text=" 1. Tamaño del problema ")
         top.pack(fill="x", padx=10, pady=(10, 4))
         ttk.Label(top, text="Orígenes (filas):").pack(side="left", padx=(10, 4), pady=8)
