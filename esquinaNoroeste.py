@@ -1,4 +1,3 @@
-
 import tkinter as tk
 from tkinter import ttk, messagebox
 
@@ -20,7 +19,6 @@ def esquina_noroeste(costos, oferta, demanda):
     total_of, total_de = sum(oferta), sum(demanda)
     notas = [f"Oferta total = {fmt(total_of)}   |   Demanda total = {fmt(total_de)}"]
 
-    # --- Balanceo ---
     if abs(total_of - total_de) < EPS:
         notas.append("El problema está BALANCEADO (oferta = demanda). "
                      "No se agrega ningún origen/destino ficticio.")
@@ -100,7 +98,6 @@ def esquina_noroeste(costos, oferta, demanda):
         })
         k += 1
 
-    # --- Costo total ---
     partes, total = [], 0
     for a in range(m):
         for b in range(n):
@@ -125,7 +122,6 @@ class App(tk.Tk):
         self.minsize(900, 650)
         self.res = None
         self.paso_actual = 0
-
 
         top = ttk.LabelFrame(self, text=" 1. Tamaño del problema ")
         top.pack(fill="x", padx=10, pady=(10, 4))
@@ -155,7 +151,6 @@ class App(tk.Tk):
         ttk.Button(bt, text="RESOLVER", command=self.resolver).pack(side="left", padx=6)
         ttk.Button(bt, text="Limpiar valores", command=self.limpiar).pack(side="left", padx=6)
 
-        # ---- Resultados ----
         self.nb = ttk.Notebook(self)
         self.nb.pack(fill="both", expand=True, padx=10, pady=(4, 10))
 
@@ -189,7 +184,6 @@ class App(tk.Tk):
         self.crear_tabla()
         self.cargar_ejemplo(True)
 
-    # ---------- Tabla de entrada ----------
     def crear_tabla(self):
         try:
             m, n = int(self.sp_m.get()), int(self.sp_n.get())
@@ -284,7 +278,6 @@ class App(tk.Tk):
         self.mostrar_final()
         self.nb.select(self.tab_pasos)
 
-    # ---------- Dibujo de tablas ----------
     def dibujar_tabla(self, parent, r, asign, of_rest, de_rest, actual, rd, cd):
         for w in parent.winfo_children():
             w.destroy()
